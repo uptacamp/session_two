@@ -1,8 +1,16 @@
 body {
-background-image: url("assets/images/yosemite.jpg");
+background-image: url("../assets/images/yosemite.jpg");
 background-color:black;
 }
 
+#home_welcome {
+   background-color:#f0e0e0;
+   height: 800px;
+}
+
+.smaller {
+   font-size: smaller;
+}
 
 .card-text-review {
    font-style: italic;
