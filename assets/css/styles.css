@@ -1,0 +1,78 @@
+body {
+background-image: url("assets/images/yosemite.jpg");
+background-color:black;
+}
+
+
+.card-text-review {
+   font-style: italic;
+}
+
+.product_heading{
+   text-align: center;
+   padding-bottom: 20px;
+}
+
+#login_top {
+
+   padding: 75px;
+}
+
+#login_btn {
+   margin-bottom: 25px;
+}
+
+#new_user {
+   width: 100%; 
+   margin-left: auto;
+}
+
+
+.cardremove {
+   height: 530px;
+   width: 350px;
+   margin: 30px;
+   float: right;
+}
+
+#contact_table {
+   
+   margin: auto;
+   width: 100px;
+}
+
+
+#carousel1, #carousel2, #carousel3 {
+   top: 10px;
+   margin: 0px;
+   padding: 0px;
+   position: absolute;
+   
+}
+
+#carousel1 a, #carousel2 a, #carousel3 a {
+   color: white;
+   font-family:fantasy, serif;
+   font-size: 1.5em;
+}
+
+#review1, #review2, #review3 {
+   height: 140px;
+}
+
+.row h2 {
+   text-align: center;
+   padding: 75px;
+}
+
+#team_photo {
+   width: 100%
+}
+
+#carouselExampleCaptionsREMOVE {
+   margin-top: 50px;
+}
+
+#new_user {
+  width: 500px;
+}
