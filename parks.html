@@ -40,10 +40,11 @@
       <h1 class="display-5 fw-bold">Explore National Parks</h1>
       <div class="col-lg-6 mx-auto">
         <p class="lead mb-4"> </p>
-        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center" style="padding:10px">
           <label for="by_location">Search by Location:</label>
-                <select name="states" id="state_list">
-                    <option value="">--Please choose an option--</option>
+                <select name="state" id="by_location">
+                    <option value="">Select State</option>
+                    <option value="all">All</option>
                     <option value="dog">Dog</option>
                     <option value="cat">Cat</option>
                     <option value="hamster">Hamster</option>
@@ -52,14 +53,50 @@
                     <option value="goldfish">Goldfish</option>
                 </select>
         </div>
+        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center"  style="padding:10px">
+          <label for="by_type">Search by Park Type:</label>
+                <select name="park_type" id="by_type">
+                    <option value="">Select Type</option>
+                    <option value="all">All</option>
+                    <option value="dog">Dog</option>
+                    <option value="cat">Cat</option>
+                    <option value="hamster">Hamster</option>
+                    <option value="parrot">Parrot</option>
+                    <option value="spider">Spider</option>
+                    <option value="goldfish">Goldfish</option>
+                </select>
+        </div>
+
+        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center"  style="padding:10px">
+          <button>Show Results</button>
+        </div>
+
         <p class="lead mb-4"> <a href="mountains.html" class="smaller">Explore mountains instead</a></p>
       </div>
+
+      
+     
+
     </div>
   
     <div class="b-example-divider"></div>
 
+
+ 
+
+  <!--Next Product Listing-->
+          
+ 
+
+
+
+
     <!-- including bootstrap js-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <script type="module" src="./assets/scripts/scripts.js"></script>
+
+    <!-- including my js-->
+
 
     <div class="container">
         <footer class="py-3 my-4">
