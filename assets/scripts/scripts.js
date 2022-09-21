@@ -1,5 +1,8 @@
     
     
+    let parks_result = {};
+
+
     async function getParks() {
         let url = 'https://uptacamp.github.io/session_two/assets/scripts/data/national_parks.json';
         try {
@@ -11,40 +14,88 @@
         }
     }
     
-    async function displayParks() {
-        let parks_result = await getParks();      
+    async function buildParksDropDown() {
+        parks_result = await getParks();      
         let state_list = [];
-        let dropdown = $('#by_location');
+        let location_dropdown = $('#by_location');
         
-        dropdown.empty();
-        dropdown.append('<option selected="true" disabled>Choose State</option>');
-        dropdown.prop('selectedIndex', 0);
+        location_dropdown.empty();
+        location_dropdown.append('<option selected="true"> Choose State</option>');
+        location_dropdown.prop('selectedIndex', 0);
         
-        //cycle through
+        //cycle through json file to build a sorted drop down list with no dupes
         for (let i = 0; i < parks_result.parks.length; i++){
             current_state = parks_result.parks[i].State;
             
-            //populate location drop down
+            if (state_list.indexOf(current_state) > -1 ){
+                //if already in the list, do nothing
+                } else {
+                //if not in the list, add it to array
+                state_list.push(current_state);
+                state_list.sort();
+                }
+        }
 
-        if (state_list.indexOf(current_state) > -1 ){
-            //if already in the list, do nothing
-        } else
-        {
-            //if not in the list, add it to array
-            state_list.push(current_state);
-            
-            dropdown.append($('<option></option>').attr('value', parks_result.parks[i].State).text(parks_result.parks[i].State));
-        }
-         
-        }
-        console.log(state_list);
-       
+        state_list.forEach(addToDropDown)
+
+        function addToDropDown(item) {
+            location_dropdown.append($('<option></option>').attr('value', item).text(item));
+         } 
+       console.log(state_list);
         }
     
+
+        function showResults(){
+            location_dropdown = $('#by_location');
+            if (location_dropdown.text == "Choose State") {
+                console.log("nothing selected)");
+            } else {
+                console.log(location_dropdown.val());
+            }
+    
+        }
+
+
+        function DisplayFilteredParksList (byLocation, byType){
+            //filter full JSON file by whatever is selected and add to webpage
+            let query_state = $('#by_location').val();
+            console.log("attempting to filter by: " + query_state);
+            $('#parks_results_table').empty();
+            let matching_results = [];
+
+            for (let i = 0; i < parks_result.parks.length; i++){
+                current_state = parks_result.parks[i].State;
+                
+                if (current_state == query_state){
+                    //add to results array
+                    matching_results.push(parks_result.parks[i]);
+                    
+                  
+
+                    
+                    
+
+                } else {
+                    //move on   
+                }
+               
+            }
+            //display matching results on screen
+            console.log(matching_results);
+            for (n = 0; n < matching_results.length; n++){
+                $('#parks_results_table').append('<tr><td>' + matching_results[n].LocationName + ' ' + '</td> <td>' + matching_results[n].City + ' ' + '</td> <td>'+ matching_results[n].State + '</td></tr>');
+            }
+
+           // $('#parks_results_table').html('<tr><td>' + matching_results[0].LocationName + ' ' + '</td> <td>' + matching_results[0].City + ' ' + '</td> <td>'+ matching_results[0].State + '</td></tr>');
+
+        }
+
         
+
+    buildParksDropDown();
     
-   displayParks();
     
 
 
+    
     

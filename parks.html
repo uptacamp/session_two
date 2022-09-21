@@ -43,36 +43,30 @@
         <div class="d-grid gap-2 d-sm-flex justify-content-sm-center" style="padding:10px">
           <label for="by_location">Search by Location:</label>
                 <select name="state" id="by_location">
-                    <option value="">Select State</option>
-                    <option value="all">All</option>
-                    <option value="dog">Dog</option>
-                    <option value="cat">Cat</option>
-                    <option value="hamster">Hamster</option>
-                    <option value="parrot">Parrot</option>
-                    <option value="spider">Spider</option>
-                    <option value="goldfish">Goldfish</option>
+                    <option value="">Choose State</option>
+                    
                 </select>
         </div>
         <div class="d-grid gap-2 d-sm-flex justify-content-sm-center"  style="padding:10px">
           <label for="by_type">Search by Park Type:</label>
                 <select name="park_type" id="by_type">
-                    <option value="">Select Type</option>
-                    <option value="all">All</option>
-                    <option value="dog">Dog</option>
-                    <option value="cat">Cat</option>
-                    <option value="hamster">Hamster</option>
-                    <option value="parrot">Parrot</option>
-                    <option value="spider">Spider</option>
-                    <option value="goldfish">Goldfish</option>
+                    <option value="">Choose Type</option>
+                  
                 </select>
         </div>
         <div class="d-grid gap-2 d-sm-flex justify-content-sm-center"  style="padding:10px">
-          <button>Show Results</button>
+          <button id="btn_show_results" onclick="DisplayFilteredParksList()">Show Results</button>
         </div>
         <p class="lead mb-4"> <a href="mountains.html" class="smaller">Explore mountains instead</a></p>
       </div>
+      <div id="filtered_results_section">
+        <table id="parks_results_table"></table>
+        
+      </div>
     </div>
   
+    
+
     <div class="b-example-divider"></div>
 
 

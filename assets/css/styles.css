@@ -8,6 +8,16 @@ background-color:black;
    height: 800px;
 }
 
+#filtered_results_section {
+   color: white;
+}
+
+#parks_results_table td, tr {
+   padding: 10px;
+   border: 1px solid;
+   background-color: gray;
+}
+
 .smaller {
    font-size: smaller;
    color:white;
