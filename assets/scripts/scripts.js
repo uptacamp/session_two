@@ -48,11 +48,10 @@
     async function getParkTypes() {
         let url = 'https://uptacamp.github.io/session_two/assets/scripts/data/park_types.json';
         try {
-            let res2 = fetch(url);
-            JSON.Parse(res2);
-            console.log(res2);
-            return await res2.json();
-                        
+            let res2 = await(fetch(url));
+            //JSON.parse(res2);
+           // await res2.json();
+                console.log(res2);
         } catch (error) {
             console.log(error);
         }
