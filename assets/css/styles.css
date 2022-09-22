@@ -1,11 +1,18 @@
-off_body {
+body {
 background-image: url("../../assets/images/yosemite.jpg");
+background-repeat: no-repeat;
 background-color:black;
 }
 
 #home_welcome {
-   background-color:#f0e0e0;
-   height: 800px;
+   background-color: white;   
+   width: 600px;
+   margin: auto;
+   
+}
+
+#footer {
+   color: white;
 }
 
 #filtered_results_section {
@@ -20,7 +27,7 @@ background-color:black;
 
 .smaller {
    font-size: smaller;
-   color:white;
+   color:black;
 }
 
 .card-text-review {

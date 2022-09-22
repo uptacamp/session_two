@@ -1,0 +1,18 @@
+// 20220922081315
+// https://erics273.github.io/enjoy_the_outdoors_demo/data/parktypes.json
+
+[
+  "National Park",
+  "National Monument",
+  "Recreation Area",
+  "Scenic Trail",
+  "Battlefield",
+  "Historic",
+  "Memorial",
+  "Preserve",
+  "Island",
+  "River",
+  "Seashore",
+  "Trail",
+  "Parkway"
+]

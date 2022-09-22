@@ -12,7 +12,7 @@
     <!-- including my global css-->
      <link rel="stylesheet" href="assets/css/styles.css">
 </head>
-<body class="bg-light">
+<body class="bg-light" background="">
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
@@ -35,22 +35,22 @@
           </div>
         </div>
     </nav>
-      
-    <div class="px-4 py-5 my-5 text-center" id="home_welcome" style="background-image: url('assets/images/yosemite.jpg')">
+    <div class="px-4 py-5 my-5 text-center" id="home_welcome">  
+    <!--<div class="px-4 py-5 my-5 text-center" id="home_welcome" style="background-image: url('assets/images/yosemite.jpg')">-->
       <h1 class="display-5 fw-bold">Explore National Parks</h1>
-      <div class="col-lg-6 mx-auto">
+      <div class="col-lg-8 mx-auto">
         <p class="lead mb-4"> </p>
-        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center" style="padding:10px">
+        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center" style="padding-bottom:10px">
           <label for="by_location">Search by Location:</label>
                 <select name="state" id="by_location">
-                    <option value="">Choose State</option>
+                    <option value="">All</option>
                     
                 </select>
         </div>
-        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center"  style="padding:10px">
+        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center"  style="padding-bottom:10px">
           <label for="by_type">Search by Park Type:</label>
                 <select name="park_type" id="by_type">
-                    <option value="">Choose Type</option>
+                    <option value="">All</option>
                   
                 </select>
         </div>
@@ -89,7 +89,7 @@
     <div class="container">
         <footer class="py-3 my-4">
         
-          <p class="text-center text-muted">&copy; 2022 Session 2 Capstone, Inc</p>
+          <p class="text-center text-muted" style="color:white;">2022 Session 2 Capstone</p>
         </footer>
       </div>
 
