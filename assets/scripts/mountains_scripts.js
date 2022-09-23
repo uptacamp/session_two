@@ -46,7 +46,7 @@
         //filter full JSON file by whatever is selected and add to webpage
         let selected_mtn = $('#mtn_dropdown').val();
         
-        $('#mountain_info_section').empty();
+        //$('#mountain_info_section').empty();
         let matching_results = [];
 
         for (let i = 0; i < mountain_result.mountains.length; i++){
@@ -61,11 +61,24 @@
 
         //display matching results on screen
         console.log(matching_results);
-        for (n = 0; n < matching_results.length; n++){
-          //  $('#mountain_info_section').append('<tr><td>' + matching_results[n].LocationName + ' ' + '</td> <td>' + matching_results[n].City + ' ' + '</td> <td>'+ matching_results[n].State + '</td></tr>');
+       
+            $('#mtn_name').removeAttr('hidden');
+            $('#mtn_name').html('');
+            $('#mtn_name').html('<strong>Name:</strong> ' + matching_results[0].name);
+            $('#mtn_elevation').removeAttr('hidden');
+            $('#mtn_elevation').html('');
+            $('#mtn_elevation').html('<strong>Elevation:</strong> ' + matching_results[0].elevation + "ft.");
+            $('#mtn_effort').removeAttr('hidden');
+            $('#mtn_effort').html('');
+            $('#mtn_effort').html('<strong>Effort:</strong> ' + matching_results[0].effort);
+            $('#mtn_description').removeAttr('hidden');
+            $('#mtn_description').html('');
+            $('#mtn_description').html('<strong>Description:</strong>' + matching_results[0].desc);
+            $('#mtn_coordinates').removeAttr('hidden');
+            $('#mtn_coordinates').html('');
+            $('#mtn_coordinates').html('<strong>Coordinates:</strong> ' + matching_results[0].coords.lat +", " + matching_results[0].coords.lng);
+            
         }
-    }
-
    
     //load the page dropdowns
     buildMountainsDropDown();
